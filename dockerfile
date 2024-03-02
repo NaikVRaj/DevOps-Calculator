@@ -11,5 +11,5 @@ RUN apt-get update && \
 # Add the compiled JAR file from the target directory to the container
 ADD target/miniproject.jar miniproject.jar
 
-# Set the entry point for the container to run the JAR file
+# Set the entry point for the container to run the JAR fil
 ENTRYPOINT ["java","-jar","/miniproject.jar"]
