@@ -1,0 +1,73 @@
+pipeline {
+    agent any
+    tools {
+        maven 'maven'
+    }
+    stages {
+
+        // Stage to checkout source code and build with Maven
+        stage('Build Maven') {
+            steps {
+                // Checkout source code from Git repository
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/NaikVRaj/miniProject/']])
+                // Build project with Maven
+                sh 'mvn clean install'
+            }
+        }
+
+        // Stage to run JUnit tests
+        stage('JUnit Tests') {
+            steps {
+                // Run JUnit tests with Maven
+                sh 'mvn test'
+            }
+        }
+
+        // Stage to build Docker image
+        stage('Build docker image') {
+            steps {
+                script {
+                    // Build Docker image
+                    sh 'docker build -t naikvraj/miniproject .'
+                }
+            }
+        }
+
+        // Stage to push Docker image to Docker Hub
+        stage('Push to docker hub') {
+            steps {
+                script {
+                    // Login to Docker Hub with credentials
+                    withCredentials([string(credentialsId: 'demo2', variable: 'speminiproject')]) {
+                        sh 'docker login -u naikvraj -p ${speminiproject}'
+                    }
+                    // Push Docker image to Docker Hub
+                    sh 'docker push naikvraj/miniproject'
+                }
+            }
+        }
+
+        // Stage to stop and remove existing Docker container
+        stage('Stop and Remove Existing Container') {
+            steps {
+                script {
+                    // Stop and remove existing Docker container named miniProject if it exists then
+                    sh 'docker rm -f miniProject || true'
+                }
+            }
+        }
+
+        // Stage to run Ansible playbook for deployment
+        stage('Run Ansible Playbook') {
+            steps {
+                script {
+                    // Run Ansible playbook for deployment
+                    ansiblePlaybook(
+                        playbook: 'deploy.yml',
+                        inventory: 'inventory'
+                    )
+                }
+            }
+        }
+    }
+}
