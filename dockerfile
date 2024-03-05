@@ -1,7 +1,7 @@
 # Use the latest version of Ubuntu as the base image
 FROM ubuntu:latest
 
-# Expose port 8080
+# Expose port 8080.
 EXPOSE 8080
 
 # Update package lists and install OpenJDK 17 JRE
