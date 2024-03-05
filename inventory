@@ -1,3 +1,2 @@
-//InventporyFile
 ansible_host = localhost ansible_user=vraj-naik ansible_ssh_pass=Vnaik@5421
 ansible_ssh_common_args = '-o StrictHostKeyChecking=no'
