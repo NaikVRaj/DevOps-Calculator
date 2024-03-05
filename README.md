@@ -1,3 +1,4 @@
+
 # Scientific Calculator Mini Project
 
 ## Overview
@@ -192,3 +193,4 @@ The scientific calculator application provides functionalities for basic arithme
 
 - Name: Vraj Jatin Naik
 - Roll No: MT2023050
+- Email-ID: vrajnaik5421@gmail.com
