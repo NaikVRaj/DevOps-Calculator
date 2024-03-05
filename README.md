@@ -126,7 +126,7 @@ The scientific calculator application provides functionalities for basic arithme
             }
         }
         ```
-      - **Screenshots**: [Jenkins Pipeline Creation](screenshots/pipeline.png)
+      - **Screenshots**: [Jenkins Pipeline Creation](Screenshots/Repos/pipeline.png)
 
    3. **Containerization (Docker)**
 
@@ -140,7 +140,7 @@ The scientific calculator application provides functionalities for basic arithme
         RUN mvn clean install
         CMD ["java", "-jar", "target/miniproject.jar"]
         ```
-      - **Screenshots**: [Dockerfile](screenshots/docker_hub.png)
+      - **Screenshots**: [Dockerfile](Screenshots/Repos/docker_hub.png)
 
    4. **Infrastructure Automation (Ansible)**
 
@@ -172,7 +172,7 @@ The scientific calculator application provides functionalities for basic arithme
             - name: Running container
               shell: docker run -it -d --name miniProject naikvraj/miniproject
         ```
-      - **Screenshots**: [Ansible Playbook](screenshots/ansible_playbook.png)
+      - **Screenshots**: [Ansible Playbook](Screenshots/Repos/ansible_playbook.png)
 
 4. **Links**
 
@@ -183,12 +183,14 @@ The scientific calculator application provides functionalities for basic arithme
 
    - Dockerfile: [Link](dockerfile)
    - Ansible Playbook: [Link](deploy.yml)
+   - Inventory File: [Link](inventory)
 
 6. **Screenshots**
 
-   - ![Scientific Calculator Application](screenshots/calculator.png)
-   - ![Calculator Operations](screenshots/calculator_operations.png)
+   - Scientific Calculator Application-Operations: [Link](Screenshots/Calculator)
 
+8. **Report**
+   - Project Report: [link](MT2023050.pdf)
 ### Created By:
 
 - Name: Vraj Jatin Naik
