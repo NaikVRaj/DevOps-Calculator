@@ -15,7 +15,6 @@ import org.apache.logging.log4j.LogManager;
 @SpringBootApplication
 @RestController
 public class Calculator {
-    //    private static final Logger logger = LogManager.getLogger(Calculator.class);
     private static final Logger logger = LogManager.getLogger(Calculator.class);
 
 
