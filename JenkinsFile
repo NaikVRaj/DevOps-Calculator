@@ -4,8 +4,7 @@ pipeline {
         maven 'maven'
     }
     stages {
-
-        // Stage to checkout source code and build with Maven
+        // Stage to checkout source code and build with Maven.
         stage('Build Maven') {
             steps {
                 // Checkout source code from Git repository
