@@ -45,7 +45,7 @@ The scientific calculator application provides functionalities for basic arithme
         git remote add origin <repository_url>
         git push -u origin master
         ```
-      - **Screenshots**: [GitHub Repo Creation](screenshots/git-hub.png) (screenshots/github_push.png)
+      - **Screenshots**: [GitHub Repo Creation](Screenshots/Repos/git-hub.png) 
 
    2. **Continuous Integration (Jenkins)**
 
