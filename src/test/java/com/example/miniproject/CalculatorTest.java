@@ -1,4 +1,3 @@
-// MT2023050 Vraj Jatin Naik
 package com.example.miniproject;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
