@@ -24,7 +24,7 @@ public class Calculator {
         try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
             while (true) {
                 clearConsole();
-//                System.out.println("\n************************************************************");
+                System.out.println("\n************************************************************");
                 System.out.println("*                Welcome to Scientific       *");
                 System.out.println("*                     Calculator               *");
                 System.out.println("**************************************************************\n");
